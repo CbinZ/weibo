@@ -83,7 +83,7 @@ class User extends Authenticatable
             $user_ids = compact('user_ids');
         }
 
-        $this->followings()->syns($user_ids, false);
+        $this->followings()->sync($user_ids, false);
     }
 
     public function unfollow($user_ids)
